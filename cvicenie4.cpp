@@ -139,7 +139,7 @@ Product* Eshop::ByName(string Pname, Customer* osoba)
 	for (i = 1; i <= List[0].Id(); i++) {
 
 
-		if (Pname.compare(List[i].Name()) == 0) {							//porovnanie hladaneho a vysledkov
+		if (List[i].Name().find(Pname,0) != string::npos) {							//porovnanie hladaneho a vysledkov
 			List[i].PInfo();
 			vysledky[0]++;										//pocet spravnych vysledkov sa zvacsi o 1
 			vysledky[vysledky[0]] = i;							//na dane miesto sa zapise id najdeneho produktu
@@ -169,7 +169,7 @@ Product* Eshop::ByProducer(string producer, Customer* osoba)
 	for (i = 1; i <= List[0].Id(); i++) {
 
 
-		if (producer.compare(List[i].Producer()) == 0) {							//porovnanie hladaneho a vysledkov
+		if (List[i].Producer().find(producer,0) == 0) {							//porovnanie hladaneho a vysledkov
 			List[i].PInfo();
 			vysledky[0]++;										//pocet spravnych vysledkov sa zvacsi o 1
 			vysledky[vysledky[0]] = i;							//na dane miesto sa zapise id najdeneho produktu
