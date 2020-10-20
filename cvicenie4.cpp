@@ -291,7 +291,7 @@ void Eshop::Intro()
 
 	Shopping(osoba);
 }
-
+	
 void Eshop::Shopping(Customer* osoba)
 {
 	int i;
@@ -439,9 +439,5 @@ int main() {
 	Eshop Obchodik("produkty.txt");
 	Obchodik.Intro();
 
-	Product P1(12,"myska","asus",15,167);
-	P1.PInfo();
-
 	return 0;
 }
-
